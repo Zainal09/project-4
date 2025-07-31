@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarana dan Prasarana | Nama Institusi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --accent-color: #e74c3c;
+        --light-color: #ecf0f1;
+        --dark-color: #2c3e50;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f5f5f5;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 2rem 0;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        color: var(--secondary-color);
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        z-index: 100;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .back-button:hover {
+        background-color: white;
+        transform: translateX(-5px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      h1::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background-color: var(--accent-color);
+        border-radius: 2px;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        font-weight: 300;
+      }
+
+      .facilities-section {
+        padding: 3rem 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: var(--primary-color);
+        font-size: 2rem;
+      }
+
+      .facilities-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .facility-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .facility-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-image {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .facility-card:hover .card-image img {
+        transform: scale(1.1);
+      }
+
+      .card-content {
+        padding: 1.5rem;
+      }
+
+      .card-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        color: var(--primary-color);
+      }
+
+      .card-description {
+        color: #666;
+        margin-bottom: 1rem;
+      }
+
+      .card-features {
+        list-style: none;
+        margin-bottom: 1.5rem;
+      }
+
+      .card-features li {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .card-features i {
+        color: var(--secondary-color);
+        margin-right: 0.5rem;
+      }
+
+      .stats-section {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 4rem 0;
+        text-align: center;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .stat-item {
+        padding: 1.5rem;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: var(--accent-color);
+      }
+
+      .stat-label {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      footer {
+        background-color: var(--dark-color);
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        .facilities-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="../Home.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        Kembali ke Halaman Utama
+      </a>
+      <div class="container">
+        <h1>Sarana dan Prasarana</h1>
+        <p class="subtitle">Fasilitas modern untuk mendukung proses belajar mengajar yang optimal</p>
+      </div>
+    </header>
+
+    <section class="facilities-section">
+      <div class="container">
+        <h2 class="section-title">Fasilitas Kami</h2>
+        <div class="facilities-grid">
+          <div class="facility-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Ruang Kelas" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Ruang Kelas Modern</h3>
+              <p class="card-description">Ruang kelas yang nyaman dilengkapi dengan teknologi pembelajaran terkini.</p>
+              <ul class="card-features">
+                <li><i class="fas fa-check"></i> AC dan pencahayaan optimal</li>
+                <li><i class="fas fa-check"></i> Proyektor dan layar LCD</li>
+                <li><i class="fas fa-check"></i> Kapasitas 30-40 siswa</li>
+                <li><i class="fas fa-check"></i> Desain ergonomis</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="facility-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Perpustakaan" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Perpustakaan Digital</h3>
+              <p class="card-description">Koleksi lengkap buku fisik dan digital dengan akses online.</p>
+              <ul class="card-features">
+                <li><i class="fas fa-check"></i> 10.000+ koleksi buku</li>
+                <li><i class="fas fa-check"></i> Ruang baca yang nyaman</li>
+                <li><i class="fas fa-check"></i> Akses e-book dan jurnal online</li>
+                <li><i class="fas fa-check"></i> Sistem peminjaman digital</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container">
+        <h2 class="section-title">Dalam Angka</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Ruang Kelas</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Laboratorium</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Perpustakaan</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Lapangan Olahraga</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy;  2025 MTs Darul Hikmah Jabon. Semua Hak Dilindungi.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <title>Visi Misi</title>
+  </head>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: var(--secondary-color);
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 100;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .back-button:hover {
+      background-color: white;
+      transform: translateX(-5px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      font-size: 2.5em;
+    }
+
+    h2 {
+      color: #3498db;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+      margin-top: 25px;
+      font-size: 1.8em;
+    }
+
+    .vision,
+    .mission,
+    .goal {
+      margin-bottom: 30px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-left: 4px solid #3498db;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .vision {
+      border-left-color: #2ecc71;
+    }
+
+    .mission {
+      border-left-color: #e74c3c;
+    }
+
+    .goal {
+      border-left-color: #f39c12;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <a href="../Home.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        Kembali ke Halaman Utama
+      </a>
+    </header>
+    <div class="container">
+      <h1>Visi Misi</h1>
+      <div class="vision">
+        <h2>Visi</h2>
+        <p>Menjadi lembaga pendidikan yang unggul dalam pengembangan ilmu pengetahuan dan teknologi.</p>
+      </div>
+      <div class="mission">
+        <h2>Misi</h2>
+        <p>Menyediakan pendidikan berkualitas tinggi, melakukan penelitian inovatif, dan berkontribusi pada masyarakat.</p>
+      </div>
+      <div class="goal">
+        <h2>Tujuan</h2>
+        <p>Mencetak lulusan yang kompeten dan siap menghadapi tantangan global.</p>
+      </div>
+    </div>
+  </body>
+</html>
